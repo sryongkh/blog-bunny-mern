@@ -66,7 +66,7 @@ const Posts = () => {
             thumbnail={thumbnail}
             category={category}
             title={title}
-            desc={desc}
+            description={desc}
             authorId={authorId}
           />
         ))}

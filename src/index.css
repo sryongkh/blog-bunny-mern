@@ -149,6 +149,11 @@ textarea:not([rows]) {
   --logo-menu: 12rem;
   --font-menu: 1rem;
   --gap-menu: 3rem;
+
+  --shadow-hover: 8px 8px 0px var(--brown);
+  --shadow-active: 0px 0px 0px var(--brown);
+  --transform-hover: translate(-8px, -8px);
+  --transform-active: translate(0px, 0px);
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Montserrat",
@@ -210,6 +215,7 @@ nav {
   width: 95%;
   max-width: 1600px;
   position: fixed;
+  z-index: 99;
   top: 2%;
   left: 50%;
   transform: translateX(-50%);
@@ -301,5 +307,33 @@ footer > ul > li > a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 3rem;
+}
+#posts__page .post {
+  position: relative;
+  padding: 1rem;
+  border: 3px solid var(--brown);
+  border-radius: 2rem;
+  transition: var(--transition);
+  z-index: 1;
+}
+#posts__page .post:hover {
+  box-shadow: var(--shadow-hover);
+  transform: var(--transform-hover);
+}
+#posts__page .post:active {
+  transform: var(--transform-active);
+  box-shadow: var(--shadow-active);
+}
+#posts__page .post__author {
+  display: flex;
+  align-items: center;
+  grid-gap: 1rem;
+}
+#posts__page .post__author .post__author-avatar {
+  max-width: 3rem;
+  max-height: 3rem;
+}
+#posts__page .post__author .post__author-details {
+  margin: auto 0;
 }
 /* END: POST PAGE */
