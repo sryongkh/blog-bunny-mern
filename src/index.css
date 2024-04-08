@@ -242,6 +242,9 @@ nav {
 section {
   margin-top: 8rem;
 }
+main {
+  min-height: 100vh;
+}
 /* FOOTER */
 footer {
   padding: 2rem 0 0 0;
@@ -302,7 +305,7 @@ footer > ul > li > a {
 }
 /* END: ERROR PAGE */
 /* POST PAGE */
-#posts__page .posts {
+#posts__page .posts__container {
   padding: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -324,6 +327,9 @@ footer > ul > li > a {
   transform: var(--transform-active);
   box-shadow: var(--shadow-active);
 }
+#posts__page .post__content p {
+  margin: 1rem 0;
+}
 #posts__page .post__author {
   display: flex;
   align-items: center;
@@ -335,5 +341,22 @@ footer > ul > li > a {
 }
 #posts__page .post__author .post__author-details {
   margin: auto 0;
+}
+#posts__page .post__footer {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 1rem;
+}
+#posts__page .post__footer .category__badge {
+  width: fit-content;
+  padding: 0.3rem 1rem;
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  border-radius: 4rem;
+  transition: var(--transition);
+}
+#posts__page .post__footer .category__badge:hover {
+  background-color: var(--blue);
+  color: var(--white);
 }
 /* END: POST PAGE */
