@@ -141,6 +141,9 @@ textarea:not([rows]) {
   --container-width-md: 92%;
   --form-width: 50%;
 
+  --border-1: 2px solid;
+  --border-2: 3px solid;
+
   --radius-1: 0.3rem;
   --radius-2: 0.6rem;
   --radius-3: 1rem;
@@ -194,7 +197,7 @@ h5 {
 /* GLOBAL */
 .btn {
   padding: 0.5rem 2rem;
-  border: 2px solid var(--brown);
+  border: var(--border-1) var(--brown);
   border-radius: 6rem;
   font-size: 1rem;
   font-weight: 700;
@@ -223,7 +226,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
-  border: 3px solid var(--brown);
+  border: var(--border-2) var(--brown);
   border-radius: 10rem;
   background: var(--white);
 }
@@ -265,7 +268,7 @@ footer > ul {
 }
 footer > ul > li {
   padding: 0.5rem 2rem;
-  border: 2px solid var(--brown);
+  border: var(--border-1) var(--brown);
   border-radius: 4rem;
 }
 footer > ul > li > a {
@@ -314,7 +317,7 @@ footer > ul > li > a {
 #posts__page .post {
   position: relative;
   padding: 1rem;
-  border: 3px solid var(--brown);
+  border: var(--border-2) var(--brown);
   border-radius: 2rem;
   transition: var(--transition);
   z-index: 1;
@@ -330,16 +333,16 @@ footer > ul > li > a {
 #posts__page .post__content p {
   margin: 1rem 0;
 }
-#posts__page .post__author {
+.post__author {
   display: flex;
   align-items: center;
   grid-gap: 1rem;
 }
-#posts__page .post__author .post__author-avatar {
+.post__author .post__author-avatar {
   max-width: 3rem;
   max-height: 3rem;
 }
-#posts__page .post__author .post__author-details {
+.post__author .post__author-details {
   margin: auto 0;
 }
 #posts__page .post__footer {
@@ -350,7 +353,7 @@ footer > ul > li > a {
 #posts__page .post__footer .category__badge {
   width: fit-content;
   padding: 0.3rem 1rem;
-  border: 2px solid var(--blue);
+  border: var(--border-1) var(--blue);
   color: var(--blue);
   border-radius: 4rem;
   transition: var(--transition);
@@ -360,3 +363,24 @@ footer > ul > li > a {
   color: var(--white);
 }
 /* END: POST PAGE */
+/* POST DETAIL */
+.post-detail {
+  width: 100%;
+  max-width: 70%;
+  margin: 10rem auto 4rem;
+  padding: 1rem;
+  border: var(--border-2) var(--brown);
+  border-radius: var(--radius-3);
+}
+.post-detail__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: var(--border-1) var(--brown);
+}
+.post-detail__header .post-detail__buttons {
+  display: flex;
+  grid-gap: 0.5rem;
+}
+/* END: POST DETAIL */
